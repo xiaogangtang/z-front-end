@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        p {
+            color: orange;
+            letter-spacing: 2px;
+            word-spacing: 6px;
+            text-decoration: line-through;
+            text-indent: 50px;
+            line-height: 3;
+            text-align: right;
+
+        }
+        div {
+            height: 400px;
+            background-color: aqua;
+            font-size: 60px;
+            /*
+            底部对齐：对于单行文字，目前一个临时的方式： 
+            让 line-height = ( height × 2 ) - font-size - x 。 x 是根据字体族，动态决定的一个值。
+            */
+            line-height: 730px;
+        }
+    </style>
+</head>
+<body>
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Nemo ullam, possimus repellat blanditiis architecto sunt id quo illo error nesciunt atque molestiae velit eum aut culpa. 
+        Quo reprehenderit nihil animi eaque veritatis tempora,
+         culpa inventore iste. 
+         Eaque earum eum nulla eius placeat cupiditate aspernatur impedit inventore 
+         possimus sapiente ut soluta nobis sequi in et dignissimos alias cumque facilis, 
+         ullam modi quas dolorum? Exercitationem veniam consequatur est dolorem aliquam 
+         enim excepturi corporis labore eveniet optio placeat asperiores, 
+         fugit odit ipsum ipsam quaerat provident rem veritatis nesciunt in incidunt.
+          Excepturi ab est vel provident, ducimus eum voluptas eveniet illo beatae quaerat? Architecto?</p>
+    <div>hello google 你好</div>
+</body>
+</html>
