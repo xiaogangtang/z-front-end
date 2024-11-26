@@ -8,13 +8,63 @@
             background-color: aquamarine;
             list-style-type: upper-roman;
             list-style-position: outside;
+            list-style-image: url(images/listimage.png);
 
             /*复合写法*/
-            list-style: circle outside;
+            list-style: circle outside url(images/listimage.png);
+        }
+        td,
+        th {
+            border: 1px solid blue;
+        }
+        /* #tr1 的 border 样式没有生效的原因是 HTML 的 <tr> 元素不直接显示边框。这是 HTML 的规范导致的：表格行 (<tr>) 的边框是由其子单元格 (<td> 或 <th>) 决定的。 */
+        #tbid,
+        #tr1,
+        #td1 {
+            border-width: 2px;
+            border-color: red;
+            border-style: dashed;
+            /*复合写法*/
+            border: 3px green dotted;
+        }
+
+
+        /* table标签特有属性 */
+        #tbid {
+            width: 800px;
+            table-layout: auto;
+            /*单元格间距*/
+            border-spacing: 10px;
+            /*合并单元格边框*/
+            border-collapse: separate;
+            /*隐藏没有内容单元格*/
+            empty-cells: show;
+            empty-cells: hide;
+            /*标题位置*/
+            caption-side: bottom;
+        }
+
+        #divid {
+            width: 400px;
+            height: 400px;
+            background-color: hotpink;
+            background-image: url(images/bgimg.png);
+            background-repeat: repeat-x;
+            background-repeat: no-repeat;
+            background-position: 30px 50px;
+
+            /*复合写法 没有顺序要求*/
+            background: yellow url(images/bgimg.png) no-repeat 30px 50px;
+        }
+
+        a {
+            cursor: crosshair;
+            /* cursor: url(images/bgimg.png),pointer; */
         }
     </style>
 </head>
 <body>
+    <!-- 列表 -->
     <ul id="ulid">
         <span>书籍</span>
         <li>罪与罚</li>
@@ -22,5 +72,45 @@
         <li>劳动法</li>
         <li>宪法</li>
     </ul>
+
+    <!-- 表格 -->
+    <table id="tbid">
+        <caption>测试</caption>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>性别</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="tr1">
+                <td>张三</td>
+                <td>18</td>
+                <td>男</td>
+            </tr>
+            <tr>
+                <td id="td1">李四</td>
+                <td>39</td>
+                <td>男</td>
+            </tr>
+            <tr>
+                <td>王五</td>
+                <td>18</td>
+                <td>女</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- 背景 -->
+    <div id="divid"></div>
+
+    <!-- 鼠标 -->
+    <a href="http://www.baidu.com" target="_blank">百度一下</a>
 </body>
 </html>
